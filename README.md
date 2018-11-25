@@ -1,1 +1,1 @@
-# react-redux-testing-advanced
+# react-redux-advanced
