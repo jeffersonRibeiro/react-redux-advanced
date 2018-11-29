@@ -24,4 +24,8 @@ it('has a textarea that users can type in', () => {
       value: 'new comment',
     }
   });
+
+  wrapped.update();
+
+  // expect(wrapper.find('text'))
 })
