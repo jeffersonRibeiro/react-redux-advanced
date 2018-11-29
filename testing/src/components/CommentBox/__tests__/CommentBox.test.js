@@ -15,7 +15,7 @@ afterEach(() => {
 
 it('has a textarea and a button', () => {
   expect(wrapped.find('textarea').length).toEqual(1);
-  expect(wrapped.find('button').length).toEqual(1);
+  expect(wrapped.find('button').length).toEqual();
 });
 
 it('has a textarea that users can type in', () => {
@@ -27,5 +27,5 @@ it('has a textarea that users can type in', () => {
 
   wrapped.update();
 
-  // expect(wrapper.find('text'))
+  expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
 })
