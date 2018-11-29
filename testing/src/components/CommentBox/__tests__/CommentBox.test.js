@@ -15,7 +15,7 @@ afterEach(() => {
 
 it('has a textarea and a button', () => {
   expect(wrapped.find('textarea').length).toEqual(1);
-  expect(wrapped.find('button').length).toEqual();
+  expect(wrapped.find('button').length).toEqual(1);
 });
 
 it('has a textarea that users can type in', () => {
@@ -28,4 +28,11 @@ it('has a textarea that users can type in', () => {
   wrapped.update();
 
   expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
-})
+});
+
+it('should submit the form and clear the textarea', () => {
+  wrapped.find('button').simulate('click');
+  wrapped.update();
+
+  expect(wrapped.find('textarea').prop('value')).toEqual('');
+});
