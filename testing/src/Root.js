@@ -4,8 +4,10 @@ import { createStire, createStore } from 'redux';
 
 import reducers from 'services/reducers';
 
-export default props => {
+export default ({ children, initialState = {} }) => {
   return (
-    <Provider store={createStore(reducers, {})}>{props.children}</Provider>
+    <Provider store={createStore(reducers, initialState)}>
+      {children}
+    </Provider>
   );
 };
