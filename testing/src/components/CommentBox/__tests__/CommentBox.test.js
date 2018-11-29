@@ -31,7 +31,7 @@ it('has a textarea that users can type in', () => {
 });
 
 it('should submit the form and clear the textarea', () => {
-  wrapped.find('button').simulate('click');
+  wrapped.find('form').simulate('submit');
   wrapped.update();
 
   expect(wrapped.find('textarea').prop('value')).toEqual('');
