@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Root from "Root";
 import App from "./components/App";
@@ -8,10 +8,7 @@ import App from "./components/App";
 ReactDOM.render(
   <Root>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route render={() => <div>Not Found</div>} />
-      </Switch>
+      <Route path="/" component={App} />
     </BrowserRouter>
   </Root>,
   document.getElementById("root")

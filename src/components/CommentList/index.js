@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class CommentList extends Component {
-
   renderComments = () => {
     const { comments } = this.props;
-    return comments.map(comment => (
-      <li key={comment}>{comment}</li>
-    ));
-  }
-  
+    return comments.map(comment => <li key={comment}>{comment}</li>);
+  };
+
   render() {
     return (
       <div>
-        <ul>
-          {this.renderComments()}
-        </ul>
+        <h4>Comment List</h4>
+        <ul>{this.renderComments()}</ul>
       </div>
     );
   }
@@ -24,7 +20,7 @@ class CommentList extends Component {
 function mapStateToProps(state) {
   return {
     comments: state.comments
-  }
+  };
 }
 
 export default connect(mapStateToProps)(CommentList);
