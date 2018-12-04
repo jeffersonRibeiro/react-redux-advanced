@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export default childComponent => {
+export default ChildComponent => {
   class ComposedComponent extends Component {
     componentDidMount() {
       this.shouldNavigateAway();
@@ -20,7 +20,7 @@ export default childComponent => {
     }
 
     render() {
-      return <childComponent />;
+      return <ChildComponent {...this.props} />;
     }
   }
 
