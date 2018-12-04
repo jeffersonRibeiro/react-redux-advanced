@@ -1,3 +1,3 @@
-export const SAVE_COMMENTS = "SAVE_COMMENTS";
-export const FETCH_COMMENTS = "FETCH_COMMENTS";
-export const CHANGE_AUTH = "CHANGE_AUTH";
+export const SAVE_COMMENTS = 'SAVE_COMMENTS';
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';
+export const CHANGE_AUTH = 'CHANGE_AUTH';
