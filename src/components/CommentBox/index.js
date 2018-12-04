@@ -8,6 +8,22 @@ class CommentBox extends Component {
     comment: ''
   };
 
+  componentDidMount() {
+    this.shouldNavigateAway();
+  }
+
+  componentDidUpdate() {
+    this.shouldNavigateAway();
+  }
+
+  shouldNavigateAway() {
+    if (!this.props.auth) {
+      console.log('I NEED TO LEAVE!!!');
+    } else {
+      console.log(':)');
+    }
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
@@ -41,7 +57,13 @@ class CommentBox extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    auth: state.auth
+  };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(CommentBox);
