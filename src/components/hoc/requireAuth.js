@@ -14,8 +14,6 @@ export default ChildComponent => {
     shouldNavigateAway() {
       if (!this.props.auth) {
         this.props.history.push('/');
-      } else {
-        console.log(':)');
       }
     }
 
